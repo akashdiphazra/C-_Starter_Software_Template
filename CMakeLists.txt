@@ -1,11 +1,17 @@
 cmake_minimum_required(VERSION 3.5)
+project(Cpp_Starter_Template)
+set(EXEC akash)
+set(CMAKE_CXX_STANDARD 20)
+include_directories(include)
+add_compile_options(-Wall -Wextra -Wpedantic)
+file(GLOB SOURCES src/*.cpp)
+add_executable(${EXEC} ${SOURCES})
 
-if(MSVC)
-  add_compile_options(/W4)
-else()
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
-add_executable(test main.cpp)
-target_compile_features(test PRIVATE cxx_lambda_init_captures)
+add_custom_command(TARGET ${EXEC} 
+   POST_BUILD
+   COMMAND akash 
+   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+   COMMENT "Running built executable and additional process..."
+   VERBATIM
+)
 

@@ -1,3 +1,0 @@
-/home/akashdiphazra/Cpp_Starter_Software_Template/build/CMakeFiles/akash.dir
-/home/akashdiphazra/Cpp_Starter_Software_Template/build/CMakeFiles/edit_cache.dir
-/home/akashdiphazra/Cpp_Starter_Software_Template/build/CMakeFiles/rebuild_cache.dir
